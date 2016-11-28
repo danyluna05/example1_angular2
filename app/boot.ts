@@ -1,5 +1,5 @@
-import { bootstrap } from 'angular2/platform/browser';
-import { FormsModule }   from '@angular/forms';
-import {AppComponent} from './components/heroe/app.componet';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import {AppModule} from './app.module';
 
-bootstrap(AppComponent);
+platformBrowserDynamic().bootstrapModule(AppModule);
+

@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('angular2/core');
+var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
         this.heroes = [
@@ -26,6 +26,9 @@ var AppComponent = (function () {
         this.title = 'Tour of Heroes';
         this.hero = { id: 1, name: 'Windstorm' };
     }
+    AppComponent.prototype.onSelect = function (hero) {
+        this.selectedHero = hero;
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'main-app',

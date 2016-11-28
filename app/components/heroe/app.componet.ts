@@ -1,4 +1,4 @@
-import { Component } from 'angular2/core';
+import { Component } from '@angular/core';
 import { Hero } from '../model/IHeroe';
 
 
@@ -20,6 +20,13 @@ export class AppComponent {
             { id: 19, name: 'Magma' },
             { id: 20, name: 'Tornado' }
         ];
+
+    selectedHero: Hero;    
     title = 'Tour of Heroes';
-    hero: Hero = {id:1, name:'Windstorm'};    
+    hero: Hero = {id:1, name:'Windstorm'};
+
+
+    onSelect(hero: Hero): void {
+        this.selectedHero = hero;
+    }    
 }
